@@ -1,0 +1,194 @@
+<div id="intro" class="">
+    <nav class="navbar navbar-expand-lg m-0   navbar-light">
+        <a class="navbar-brand" href="#">FZ-Enterprise</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <!-- <form class="bg-light form-inline my-2 my-lg-0">
+
+                <a mat-button>
+                    <img src="https://img.icons8.com/material-outlined/24/000000/whatsapp.png">
+                </a>
+
+                <a mat-button>
+                    <img src="https://img.icons8.com/material/24/000000/facebook-f.png">
+                </a>
+                <button mat-button>
+                    <img src="https://img.icons8.com/color/48/000000/twitter.png">
+                </button>
+            </form> -->
+        </div>
+    </nav>
+    <div id="introContent" class="m-0 p-0 row vh-100 vw-100 p-3 m-0">
+        <!-- <video id="video" loop autoplay preload muted>
+          <source src="../../../assets/Videos/fondo1.mp4" type='video/mp4' />
+            
+        </video>
+         <iframe title="vimeo-player" src="https://player.vimeo.com/video/183786499" width="640" height="360" frameborder="0" allowfullscreen></iframe> -->
+        <!--<div class="   p-4 col-10 col-lg-6 text-white ">
+            <div>
+                <img class="foto" src="../../../assets/Imagenes/CARLI SNACKPH.png" alt="">
+                <h1 class=" mt-2  p-2 font-weight-light">FZEnterprise</h1>
+
+                <h5 class="w-75 font-weight-light">Lorem ipsum dolor sit amet, consectetur deleniti, obcaecati est</h5>
+                <button type="button" class="d-lg-none d-block btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                    Launch demo modal
+                </button>
+            </div>
+        </div> -->
+        <div class=" p-4 col-10 col-lg-6">
+            <h1 class="display-4">Hello, world!</h1>
+            <img class="w-25" src="::/../../../../assets/Imagenes/logoPhotoshop.png" alt="">
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a type="button" class="d-lg-none d-block btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Learn more</a>
+        </div>
+
+        <div class="col-6 d-lg-flex align-items-center justify-content-center   d-none">
+            <div class="w-75 p-3  jumbotron fzShadow" color="primary">
+                <mat-toolbar>MENSAJE</mat-toolbar>
+                <div class="w-100">
+                    <div>
+                        <form [formGroup]="formMensaje">
+                            <div>
+                                <mat-form-field class="inputFullWidth">
+                                    <mat-icon matPrefix>person</mat-icon>
+                                    <input matInput placeholder="Nombre *" formControlName="Nombre">
+                                    <mat-error *ngIf="formMensaje.controls['Nombre'].hasError('required')">
+                                        Por favor ingrese un Nombre <strong>Valido</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <mat-form-field class="inputFullWidth">
+                                    <mat-icon matPrefix>person</mat-icon>
+                                    <input matInput placeholder="Apellidos *" formControlName="Apellido">
+                                    <mat-error *ngIf="formMensaje.controls['Apellido'].hasError('required')">
+                                        Por favor ingrese un Apellido <strong>Valido</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <mat-form-field class="inputFullWidth">
+                                    <mat-icon matPrefix>email</mat-icon>
+                                    <input matInput placeholder="Email" formControlName="Email">
+                                    <mat-error *ngIf="!formMensaje.controls['Email'].valid">
+                                        Por favor ingrese un correo <strong>Valido</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <mat-form-field class="inputFullWidth">
+                                    <mat-icon matPrefix>local_phone</mat-icon>
+                                    <input matInput placeholder="Telefono *" formControlName="Telefono">
+                                    <mat-error *ngIf="formMensaje.controls['Telefono'].hasError('required')">
+                                        Telefono<strong> requerido</strong>
+                                    </mat-error>
+                                    <mat-error *ngIf="formMensaje.controls['Telefono'].hasError('pattern')">
+                                        <strong> Solo números</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <mat-form-field class="inputFullWidth">
+                                    <mat-icon matPrefix>message</mat-icon>
+                                    <textarea matInput placeholder="Describa su mensaje *" formControlName="Mensaje"></textarea>
+                                    <mat-error *ngIf="formMensaje.controls['Mensaje'].hasError('required')">
+                                        Por favor ingrese un Mensaje <strong>Valido</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <button (click)="sendMessage(formMensaje.values)" mat-raised-button color="primary">ENVIAR</button>
+                            </div>
+
+                            <!-- <div class="form-group">
+                           
+                                <label for="exampleInput1"> address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Modal -->
+<div class="w-100 modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Mensaje</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="EmailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+#intro {
+    height: 100vh;
+    width: 100vw;
+    // background-image: url("../../../assets/Imagenes/fondoimg.png");
+    background-color: white;
+    background-size: cover;
+}
+
+.fzShadow {
+    -webkit-box-shadow: 0px 0px 50px 5px #aaa1a1;
+    -moz-box-shadow: 0px 0px 50px 5px #aaa1a1;
+    box-shadow: 0px 0px 50px 5px #aaa1a1;
+}
+
+#video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -10;
+    visibility: visible;
+}
+
+#introContent {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-left: 10px;
+}
+
+.infoIntro {
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.bgDarkTransition {
+    color: white;
+    background-color: rgba(95, 93, 93, 0.7);
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.foto {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    //  transform: rotate(-5deg);
+    //  -webkit-transform: rotate(-5deg);
+    //  -moz-transform: rotate(-5deg);
+    //  -o-transform: rotate(-5deg);
+}
+
+.inputFullWidth {
+    width: 100%;
+}
+
+.index {
+    z-index: 10;
+    width: 100vw;
+}
